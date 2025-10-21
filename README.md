@@ -40,14 +40,3 @@ This portfolio was created as part of:
 ## 👨‍💻 About the Developer
 
 I'm Mohammad Rayan, a passionate web developer learning to create user-friendly and accessible websites. This portfolio represents my journey in web development and showcases my growing skills in HTML and web technologies.
-
-## 📞 Contact
-
-Feel free to reach out through the contact form on the website or connect with me on:
-- Email: mohammad.rayan@example.com
-- LinkedIn: linkedin.com/in/mohammad-rayan
-- GitHub: github.com/mohammad-rayan
-
----
-
-⭐ If you like this project, please give it a star on GitHub!
