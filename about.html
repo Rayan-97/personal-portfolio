@@ -1,40 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Mohammad Rayan</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-list li {
+            background-color: var(--gray-100);
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .about-list li:hover {
+            background-color: var(--gray-200);
+            transform: translateX(5px);
+        }
+
+        .highlight-text {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Mohammad Rayan</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <section>
+        <section class="about-content">
             <h2>About Me</h2>
-            <p>Welcome to my personal portfolio! I'm Mohammad Rayan, a dedicated and enthusiastic web developer who is passionate about creating meaningful digital experiences. My journey in web development began with a curiosity about how websites work, and it has evolved into a genuine passion for crafting clean, accessible, and user-friendly web solutions.</p>
-            
-            <p>I believe that good web development is not just about writing code, but about understanding user needs and creating solutions that make people's lives easier. I'm constantly learning new technologies and best practices to stay current in this ever-evolving field.</p>
-            
-            <p>When I'm not coding, you can find me exploring new technologies, reading about web development trends, or working on personal projects that challenge me to grow as a developer. I'm always excited about new opportunities to collaborate and create something amazing together.</p>
+            <p>Welcome to my personal portfolio! I'm <span class="highlight-text">Mohammad Rayan</span>, a dedicated and
+                enthusiastic web developer who is passionate about creating meaningful digital experiences. My journey
+                in web development began with a curiosity about how websites work, and it has evolved into a genuine
+                passion for crafting clean, accessible, and user-friendly web solutions.</p>
+
+            <p>I believe that good web development is not just about writing code, but about understanding user needs
+                and creating solutions that make people's lives easier. I'm constantly learning new technologies and
+                best practices to stay current in this ever-evolving field.</p>
+
+            <p>When I'm not coding, you can find me exploring new technologies, reading about web development trends, or
+                working on personal projects that challenge me to grow as a developer. I'm always excited about new
+                opportunities to collaborate and create something amazing together.</p>
         </section>
 
-        <section>
+        <section class="about-content">
             <h2>My Journey</h2>
-            <p>My web development journey started with learning HTML, and I'm now expanding my knowledge to include CSS, JavaScript, and other modern web technologies. I'm committed to continuous learning and improvement in my craft.</p>
+            <p>My web development journey started with learning <span class="highlight-text">HTML</span>, and I'm now
+                expanding my knowledge to include <span class="highlight-text">CSS</span>, <span
+                    class="highlight-text">JavaScript</span>, and other modern web technologies. I'm committed to
+                continuous learning and improvement in my craft.</p>
         </section>
 
-        <section>
+        <section class="about-content">
             <h2>What I Do</h2>
-            <ul>
+            <ul class="about-list">
                 <li>Create responsive and accessible websites</li>
                 <li>Focus on clean, semantic HTML structure</li>
                 <li>Prioritize user experience in every project</li>
@@ -47,4 +90,5 @@
         <p>&copy; 2025 Mohammad Rayan. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

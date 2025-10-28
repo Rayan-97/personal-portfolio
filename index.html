@@ -1,56 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Rayan - Personal Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .highlight {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #about-section p::first-letter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            float: left;
+            margin: 0.1rem 0.2rem 0 0;
+            line-height: 1;
+        }
+
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        section:hover h2 {
+            color: #1d4ed8;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Mohammad Rayan</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I'm Mohammad Rayan, a passionate web developer with a keen interest in creating user-friendly and accessible websites. I'm currently expanding my skills in web development and looking forward to working on exciting projects that challenge me and help me grow professionally.</p>
+        <section id="hero-section" class="two-column-layout">
+            <div class="content-left">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Hello! I'm <span class="highlight">Mohammad Rayan</span>, a passionate web developer with a keen
+                    interest in creating user-friendly and accessible websites. I'm currently expanding my skills in web
+                    development and looking forward to working on exciting projects that challenge me and help me grow
+                    professionally.</p>
+                <button id="download-btn" type="button" class="pulse"
+                    onclick="alert('CV download would start here!')">Download My CV (PDF)</button>
+            </div>
+            <div class="content-right">
+                <img id="profile-photo" src="https://picsum.photos/300/300" alt="Mohammad Rayan profile picture"
+                    width="300" height="300">
+            </div>
         </section>
 
-        <section>
-            <h2>My Photo</h2>
-            <img src="https://picsum.photos/300/300" alt="Mohammad Rayan profile picture" width="300" height="300">
+        <section id="skills-hobbies-section" class="two-column-layout">
+            <div class="content-left">
+                <h2>My Skills</h2>
+                <ul id="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Time Management</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="content-right">
+                <h2>My Hobbies</h2>
+                <ul id="hobbies-list">
+                    <li>Reading</li>
+                    <li>Photography</li>
+                    <li>Hiking</li>
+                    <li>Coding</li>
+                    <li>Gaming</li>
+                    <li>Music</li>
+                </ul>
+            </div>
         </section>
 
-        <section>
-            <h2>My Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>Problem Solving</li>
-                <li>Communication</li>
-                <li>Time Management</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>My Hobbies</h2>
-            <ul>
-                <li>Reading</li>
-                <li>Photography</li>
-                <li>Hiking</li>
-                <li>Coding</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Download CV</h2>
-            <button type="button" onclick="alert('CV download would start here!')">Download My CV (PDF)</button>
+        <section id="about-details-section">
+            <h2>About My Journey</h2>
+            <p>I started my web development journey with a curiosity about how websites work. From learning basic HTML
+                to exploring modern frameworks, every step has been an exciting discovery. I believe in continuous
+                learning and staying updated with the latest web technologies.</p>
+            <p>My goal is to create websites that not only look great but also provide excellent user experience and
+                accessibility for everyone.</p>
         </section>
     </main>
 
@@ -58,4 +121,5 @@
         <p>&copy; 2025 Mohammad Rayan. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

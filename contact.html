@@ -5,6 +5,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Mohammad Rayan</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+            align-items: stretch;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 450px;
+        }
+
+        .contact-info-section {
+            flex: 1;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info-section h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-section h2::after {
+            background-color: white;
+            width: 60px;
+        }
+
+        .contact-info-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .contact-details {
+            margin-top: 1.5rem;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-details li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: white;
+        }        .contact-details li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: white;
+            font-weight: bold;
+        }
+
+        .contact-form-section {
+            flex: 1;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .contact-form-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                gap: 1.5rem;
+                min-height: auto;
+            }
+
+            .contact-info-section,
+            .contact-form-section {
+                padding: 1.5rem;
+            }
+
+            .contact-info-section h2,
+            .contact-form-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -14,40 +170,61 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Contact Me</h2>
-            <p>I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say
-                hello, feel free to reach out using the form below.</p>
-        </section>
+        <section class="contact-container">
+            <div class="contact-info-section">
+                <h2>Let's Connect</h2>
+                <p>I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to
+                    say hello, I'm always excited to connect.</p>
 
-        <section>
-            <h2>Get In Touch</h2>
-            <form action="#" method="post">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                <div class="contact-details">
+                    <h3>Why Get In Touch?</h3>
+                    <ul>
+                        <li>Discuss potential projects</li>
+                        <li>Collaborate on web development</li>
+                        <li>Share ideas and insights</li>
+                        <li>Network with fellow developers</li>
+                    </ul>
                 </div>
 
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                <p>I typically respond within 24 hours and I'm always happy to have a conversation about web development
+                    or potential opportunities.</p>
+            </div>
 
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="6" cols="50" required></textarea>
-                </div>
+            <div class="contact-form-section">
+                <h2>Send Me a Message</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
 
-                <div>
-                    <input type="submit" value="Send Message">
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            placeholder="Tell me about your project or question..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Send Message" class="submit-btn">
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
